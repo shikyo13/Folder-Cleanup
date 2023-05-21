@@ -14,7 +14,6 @@ def clean_folder(path, approved_exts):
     total_size = 0
     files_to_remove = []
     
-    # file deepcode ignore PT: <please specify a reason of ignoring this>
     for root, dirs, files in os.walk(path):
         for file in files:
             if not any(file.endswith(ext) for ext in approved_exts):
